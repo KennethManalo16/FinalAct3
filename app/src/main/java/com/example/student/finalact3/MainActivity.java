@@ -13,6 +13,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         System.out.print("Ayoko na mag IT");
-        // Dito kame Dito
+        // Dito kame Ditoo
     }
 }
