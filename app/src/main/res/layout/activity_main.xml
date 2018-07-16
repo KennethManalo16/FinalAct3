@@ -65,7 +65,7 @@
             android:inputType="textPersonName" />
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/padding2"
+        android:id="@+id/padding213"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="3dp">
