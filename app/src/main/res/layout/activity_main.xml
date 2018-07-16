@@ -15,7 +15,7 @@
         tools:layout_editor_absoluteY="288dp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/txt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -25,7 +25,7 @@
         tools:layout_editor_absoluteY="175dp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/txt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
