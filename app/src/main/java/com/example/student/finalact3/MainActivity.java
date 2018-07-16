@@ -12,6 +12,6 @@ public class MainActivity extends AppCompatActivity {
         //this is my testing
 
 
-        System.out.print("Hello");
+        System.out.print("Ayoko na mag IT");
     }
 }
