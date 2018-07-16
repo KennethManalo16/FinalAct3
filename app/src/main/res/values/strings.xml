@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">FinalAct3</string>
+    <string name="app_name">OrderingSystem</string>
+    <string name="ordering_system">Ordering System</string>
 </resources>
