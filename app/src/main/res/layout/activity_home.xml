@@ -5,14 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#C80D0D"
+    android:background="#000000"
     tools:context=".home">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="74dp"
+        android:background="#C80D0D"
         android:orientation="horizontal">
+
         <!--McDelivery Image-->
         <ImageView
             android:id="@+id/mcdelivery"
@@ -30,8 +32,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="LOGIN"
                 android:background="@drawable/my_button_bg"
+                android:text="PROFILE"
                 android:textColor="@android:color/background_light"
                 android:textSize="14sp" />
             <!--Register Button-->
@@ -40,12 +42,72 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="REGISTER"
                 android:background="@drawable/my_button_bg"
+                android:text="ORDER HISTORY"
                 android:textColor="@android:color/background_light" />
         </LinearLayout>
 
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/mcshare" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/happymeal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#000000"
+            app:srcCompat="@drawable/valuemeal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#000000"
+            app:srcCompat="@drawable/burgers" />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#000000"
+            app:srcCompat="@drawable/chicken" />
     </LinearLayout>
 
 </LinearLayout>
