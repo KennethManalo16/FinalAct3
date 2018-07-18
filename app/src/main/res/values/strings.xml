@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">OrderingSystem</string>
     <string name="ordering_system">Ordering System</string>
+    <string name="Mcdo_Image">Mcdo Image</string>
+    <string name="user_name">User Name:</string>
+    <string name="email_or_username">Email or Username</string>
+    <string name="password">Password:</string>
+    <string name="log_in">LOG IN</string>
+    <string name="register">REGISTER</string>
+    <string name="user_list">USER LIST</string>
 </resources>
