@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#C80D0D"
+    tools:context=".home">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:orientation="horizontal">
+        <!--McDelivery Image-->
+        <ImageView
+            android:id="@+id/mcdelivery"
+            android:layout_width="203dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/mcdodelivery" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--Login Button-->
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="LOGIN"
+                android:background="@drawable/my_button_bg"
+                android:textColor="@android:color/background_light"
+                android:textSize="14sp" />
+            <!--Register Button-->
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="REGISTER"
+                android:background="@drawable/my_button_bg"
+                android:textColor="@android:color/background_light" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
