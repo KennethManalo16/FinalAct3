@@ -103,9 +103,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/login"
@@ -114,7 +112,6 @@
             android:layout_weight="1"
             android:text="LOG IN"
             android:background="#FDAB05 "
-
             android:textSize="18sp" />
 
     </LinearLayout>
@@ -126,7 +123,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:orientation="horizontal">
 
 
@@ -134,7 +130,6 @@
             android:id="@+id/adduser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_weight="1"
             android:text="ADD USER"
             android:background="#FDAB05 "
@@ -145,17 +140,15 @@
         android:id="@+id/padding4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="3dp"></LinearLayout>
+        android:padding="3dp">
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:orientation="horizontal">
-
 
         <Button
             android:id="@+id/userlist"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
