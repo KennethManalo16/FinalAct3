@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="serif"
-            android:text="Ordering System"
+            android:text="Registration"
             android:textAlignment="center"
             android:textColor="@android:color/background_light"
             android:textSize="24sp"
@@ -117,16 +117,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnLogIn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/log_in"
-            android:background="@drawable/my_button_bg2"
-            android:textSize="18sp"
-            android:onClick="Login"/>
-
     </LinearLayout>
     <LinearLayout
         android:id="@+id/Divider3"
@@ -143,12 +133,12 @@
 
 
         <Button
-            android:id="@+id/btnRegister"
+            android:id="@+id/btnRegistered"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/register"
             android:background="@drawable/my_button_bg2"
+            android:text="@string/register"
             android:textSize="18sp" />
 
     </LinearLayout>
@@ -164,14 +154,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnUserList"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/my_button_bg2"
-            android:text="@string/user_list"
-            android:textSize="18sp" />
     </LinearLayout>
 
 
