@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,8 +19,9 @@
         <ImageView
             android:id="@+id/mcdelivery"
             android:layout_width="203dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/mcdodelivery" />
+            android:layout_height="match_parent"/>
+            <!--android:src="@drawable/mcdodelivery" -->
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,16 +61,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#000000"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/mcshare" />
+            android:layout_weight="1"/>
+            <!--app:srcCompat="@drawable/mcshare" -->
+
 
         <ImageButton
             android:id="@+id/imageButton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#000000"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/happymeal" />
+            android:layout_weight="1"/>
+            <!--app:srcCompat="@drawable/happymeal" -->
+
 
     </LinearLayout>
 
@@ -84,8 +87,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#000000"
-            app:srcCompat="@drawable/valuemeal" />
+            android:background="#000000"/>
+            <!--app:srcCompat="@drawable/valuemeal" -->
+
     </LinearLayout>
 
     <LinearLayout
@@ -98,16 +102,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#000000"
-            app:srcCompat="@drawable/burgers" />
+            android:background="#000000"/>
+            <!--app:srcCompat="@drawable/burgers" -->
+
 
         <ImageButton
             android:id="@+id/imageButton5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#000000"
-            app:srcCompat="@drawable/chicken" />
+            android:background="#000000"/>
+            <!--app:srcCompat="@drawable/chicken" -->
+
     </LinearLayout>
 
 </LinearLayout>
