@@ -63,8 +63,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/burger"
             android:onClick="Burgers"/>
+            <!--app:srcCompat="@drawable/burger"-->
+
     </LinearLayout>
 
     <LinearLayout
@@ -77,8 +78,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/chick"
             android:onClick="Chicken"/>
+            <!--app:srcCompat="@drawable/chick"-->
+
 
     </LinearLayout>
 
@@ -93,8 +95,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        app:srcCompat="@drawable/des"
         android:onClick="Dessert"/>
+        <!--app:srcCompat="@drawable/des"-->
+
 
 
 </LinearLayout>
