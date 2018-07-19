@@ -42,7 +42,7 @@ public class Register extends AppCompatActivity {
 
                 Toast.makeText(Register.this,name+password,Toast.LENGTH_LONG).show();
 
-            /*    if(TextUtils.isEmpty(name)){
+                /* if(TextUtils.isEmpty(name)){
                     Toast.makeText(Register.this,"Please enter email",Toast.LENGTH_LONG).show();
                     return;
                 }
@@ -52,12 +52,12 @@ public class Register extends AppCompatActivity {
                     return;
                 } */
 
-              /*  HashMap<String, String> dataMap = new HashMap<String, String>();
+                HashMap<String, String> dataMap = new HashMap<String, String>();
                 dataMap.put("Username", name);
-                dataMap.put("Password", password); */
+                dataMap.put("Password", password);
 
 
-                mdatabase.child("Username").setValue("josadjkla");
+                mdatabase.push().setValue(dataMap);
 
 
 
