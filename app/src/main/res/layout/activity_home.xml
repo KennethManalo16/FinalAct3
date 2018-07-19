@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -56,40 +57,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#000000"
-            android:layout_weight="1"/>
-            <!--app:srcCompat="@drawable/mcshare" -->
 
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#000000"
-            android:layout_weight="1"/>
-            <!--app:srcCompat="@drawable/happymeal" -->
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/imageButton3"
+        <ImageView
+            android:id="@+id/btnBurgers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#000000"/>
-            <!--app:srcCompat="@drawable/valuemeal" -->
-
+            app:srcCompat="@drawable/burger"
+            android:onClick="Burgers"/>
     </LinearLayout>
 
     <LinearLayout
@@ -97,23 +72,31 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/imageButton4"
+        <ImageView
+            android:id="@+id/btnChicken"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#000000"/>
-            <!--app:srcCompat="@drawable/burgers" -->
-
-
-        <ImageButton
-            android:id="@+id/imageButton5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#000000"/>
-            <!--app:srcCompat="@drawable/chicken" -->
+            app:srcCompat="@drawable/chick"
+            android:onClick="Chicken"/>
 
     </LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/btnDesserts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/des"
+        android:onClick="Dessert"/>
+
+
+</LinearLayout>
 
 </LinearLayout>

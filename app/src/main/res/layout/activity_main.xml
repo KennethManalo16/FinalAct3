@@ -124,7 +124,8 @@
             android:layout_weight="1"
             android:text="@string/log_in"
             android:background="@drawable/my_button_bg2"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:onClick="Login"/>
 
     </LinearLayout>
     <LinearLayout
