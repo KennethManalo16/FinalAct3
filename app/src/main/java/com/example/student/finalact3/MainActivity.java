@@ -1,6 +1,7 @@
 package com.example.student.finalact3;
 
 import android.content.Intent;
+import android.location.Address;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> Fname = new ArrayList<String>();
     ArrayList<String> Lname = new ArrayList<String>();
     ArrayList<String> Mnumber = new ArrayList<String>();
+    ArrayList<String> Add = new ArrayList<String>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                                 b.putString("firstname", Fname.get(x));
                                 b.putString("lastname", Lname.get(x));
                                 b.putString("mobilenumber", Mnumber.get(x));
+                                b.putString("address", Add.get(x));
                                 b.putString("password", Pass.get(x));
                                 intent.putExtras(b);
                                 startActivity(intent);
@@ -98,11 +101,13 @@ public class MainActivity extends AppCompatActivity {
                     String fname = value.get("First Name");
                     String lname = value.get("Last Name");
                     String mnumber = value.get("Mobile Number");
+                    String add = value.get("Address");
                     User.add(user);
                     Pass.add(pass);
                     Fname.add(fname);
                     Lname.add(lname);
                     Mnumber.add(mnumber);
+                    Add.add(add);
                 }
             }
 

@@ -65,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="53dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="DESSERTS"
+        android:text="BURGERS"
         android:textAlignment="center"
         android:textColor="@android:color/holo_orange_light"
         android:textSize="36sp"

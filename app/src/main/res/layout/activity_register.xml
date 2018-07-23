@@ -11,7 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        >
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -20,7 +22,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/LblOrderingSystems"
@@ -36,126 +38,140 @@
 
 
                 <ImageView
-                android:id="@+id/LblMcdoImage"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:src="@drawable/unnamed"
-                tools:ignore="ContentDescription" />
+                    android:id="@+id/LblMcdoImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/unnamed"
+                    tools:ignore="ContentDescription" />
 
                 <EditText
-                android:id="@+id/txtRegisterFirstName"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:ems="10"
-                android:hint="First Name"
-                android:inputType="textPersonName"
-                tools:ignore="HardcodedText" />
+                    android:id="@+id/txtRegisterFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:hint="First Name"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/background_light"
+                    tools:ignore="HardcodedText" />
 
                 <LinearLayout
-                android:id="@+id/Divider1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="3dp"
-                android:orientation="horizontal">
-                </LinearLayout>
-
-                <EditText
-                android:id="@+id/txtRegisterLastName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Last Name"
-                android:inputType="textPersonName"
-                tools:ignore="HardcodedText" />
-
-                <LinearLayout
-                android:id="@+id/Divider2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="3dp"
-                android:orientation="horizontal">
-                </LinearLayout>
-
-                <EditText
-                android:id="@+id/txtRegisterMobileNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Mobile No."
-                android:inputType="phone"
-                tools:ignore="HardcodedText" />
-
-                <EditText
-                android:id="@+id/txtRegisterEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Email Address"
-                android:inputType="textEmailAddress"
-                tools:ignore="HardcodedText"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="417dp" />
-
-                <EditText
-                android:id="@+id/txtRegisterPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Password"
-                android:inputType="textPassword"
-                tools:ignore="HardcodedText,TextFields" />
-
-                <LinearLayout
-                android:id="@+id/Divider5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="3dp"
-                android:orientation="horizontal">
-                </LinearLayout>
-
-                <EditText
-                android:id="@+id/txtRegisterConfirmPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Re-enter Password"
-                android:inputType="textPassword"
-                tools:ignore="HardcodedText" />
-
-                <LinearLayout
-                android:id="@+id/Divider6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="3dp"
-                android:orientation="horizontal">
-                </LinearLayout>
-
-                <Button
-                android:id="@+id/btnSubmit"
+                    android:id="@+id/Divider1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/my_button_bg2"
-                android:text="SUBMIT"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText" />
+                    android:orientation="horizontal"
+                    android:padding="3dp"></LinearLayout>
+
+                <EditText
+                    android:id="@+id/txtRegisterLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:hint="Last Name"
+                    android:inputType="textPersonName"
+                    tools:ignore="HardcodedText" />
 
                 <LinearLayout
-                android:id="@+id/Divider7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="3dp"
-                android:orientation="horizontal">
-                </LinearLayout>
+                    android:id="@+id/Divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp"></LinearLayout>
+
+                <EditText
+                    android:id="@+id/txtRegisterBirthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:hint="Birthday"
+                    android:inputType="date"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/txtRegisterMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:hint="Mobile No."
+                    android:inputType="phone"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/txtRegisterAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:hint="Address"
+                    android:inputType="textPersonName"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/txtRegisterEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Email Address"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="HardcodedText"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="417dp" />
+
+                <EditText
+                    android:id="@+id/txtRegisterPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    tools:ignore="HardcodedText,TextFields" />
+
+                <LinearLayout
+                    android:id="@+id/Divider5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp"></LinearLayout>
+
+                <EditText
+                    android:id="@+id/txtRegisterConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Re-enter Password"
+                    android:inputType="textPassword"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:id="@+id/Divider6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp"></LinearLayout>
 
                 <Button
-                android:id="@+id/btnCancel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="CANCEL"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText" />
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_button_bg2"
+                    android:text="SUBMIT"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:id="@+id/Divider7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp"></LinearLayout>
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CANCEL"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
         </ScrollView>

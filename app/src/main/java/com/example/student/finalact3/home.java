@@ -11,20 +11,22 @@ import android.widget.TextView;
 
 public class home extends AppCompatActivity {
     TextView User;
-    Button burgers,chickens,desserts;
+    Button burgers,chickens,desserts,myaccount,ordersummary,logout;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+        final Bundle b = getIntent().getExtras();
         burgers = (Button) findViewById(R.id.btnBurgers);
         chickens = (Button) findViewById(R.id.btnChicken);
         desserts = (Button) findViewById(R.id.btnDesserts);
+        myaccount = (Button) findViewById(R.id.btnMyAccount);
+        ordersummary = (Button) findViewById(R.id.btnOrderSummary);
+        logout = (Button) findViewById(R.id.btnLogOut);
 
         User = (TextView) findViewById(R.id.txtUser);
-        final Bundle b = getIntent().getExtras();
-        User.setText("Hi,  "+b.getString("firstname")+"!");
 
+        User.setText("Hi,  "+b.getString("firstname")+"!");
 
       burgers.setOnClickListener(new View.OnClickListener(){
         @Override
@@ -58,5 +60,36 @@ public class home extends AppCompatActivity {
 
         });
 
+        myaccount.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(home.this,MyAccount.class);
+                intent.putExtras(b);
+                startActivity(intent);
+                finish();
+            }
 
-}}
+        });
+        ordersummary.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(home.this,ordersummary.class);
+                intent.putExtras(b);
+                startActivity(intent);
+                finish();
+            }
+
+        });
+
+        logout.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(home.this, MainActivity.class);
+                intent.putExtras(b);
+                startActivity(intent);
+                finish();
+            }
+
+        });
+    }
+}

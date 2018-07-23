@@ -11,16 +11,22 @@ import android.widget.Toast;
 public class OrderConfirmation extends AppCompatActivity {
     int quantity=1;
     Button numdecrement,numincrement,cancel;
-    TextView displayquantityy;
+    TextView displayquantityy,productname,productprice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_confirmation);
-        final Bundle b = getIntent().getExtras();
+
         numdecrement = (Button) findViewById(R.id.minus);
         numincrement = (Button) findViewById(R.id.plus);
         cancel = (Button) findViewById(R.id.cancel);
         displayquantityy = (TextView)findViewById(R.id.number);
+        final Bundle b = getIntent().getExtras();
+        productname = (TextView) findViewById(R.id.txtProductName);
+        productprice = (TextView) findViewById(R.id.txtPrice);
+        productname.setText(b.getString("name"));
+        productprice.setText(b.getString("price"));
+
         numdecrement.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){

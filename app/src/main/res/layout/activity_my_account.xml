@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,290 +9,307 @@
     tools:context=".MyAccount">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="95dp"
-        android:background="#C80D0D"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <!--McDelivery Image-->
-        <ImageView
-            android:id="@+id/mcdelivery"
-            android:layout_width="203dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/mcdodelivery" />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <!--Profile Button-->
-            <Button
-                android:id="@+id/button12"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="PROFILE"
-                android:background="@drawable/my_button_bg"
-                android:textColor="@android:color/background_light"
-                android:textSize="14sp"/>
-            <!--Order History-->
-            <Button
-                android:id="@+id/button"
+                android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:background="#C80D0D"
+                android:orientation="horizontal">
+
+                <!--McDelivery Image-->
+                <ImageView
+                    android:id="@+id/mcdelivery"
+                    android:layout_width="203dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/mcdodelivery" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <!--Profile Button-->
+                    <Button
+                        android:id="@+id/btnMyAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="MY ACCOUNT"
+                        android:background="@drawable/my_button_bg"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="14sp"/>
+                    <!--Order History-->
+                    <Button
+                        android:id="@+id/btnOrderSummary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/my_button_bg"
+                        android:text="ORDER SUMMARY"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="14sp" />
+                    <!--Logout Button-->
+                    <Button
+                        android:id="@+id/btnLogOut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/my_button_bg"
+                        android:text="LOGOUT"
+                        android:textColor="@android:color/background_light" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/my_button_bg"
-                android:text="ORDER SUMMARY"
-                android:textColor="@android:color/background_light"
-                android:textSize="14sp" />
-            <!--Logout Button-->
-            <Button
-                android:id="@+id/button2"
+                android:orientation="horizontal">
+                <!--My Account Button-->
+                <Button
+                    android:id="@+id/btnMyAccountDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_button_bg2"
+                    android:text="My ACCOUNT"
+                    android:textColor="@android:color/background_light"
+                    android:textStyle="bold" />
+                <!--Order History Button-->
+                <Button
+                    android:id="@+id/btnOrderHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_button_bg2"
+                    android:text="ORDER HISTORY"
+                    android:textColor="@android:color/background_light"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/my_button_bg"
-                android:text="LOGOUT"
-                android:textColor="@android:color/background_light" />
-        </LinearLayout>
+                android:orientation="horizontal">
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Full Name"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ffc300"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--First Name Edit Text-->
+                <EditText
+                    android:id="@+id/txtMyAccountFirstName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffff"
+                    android:ems="10"
+                    android:hint="First Name"
+                    android:inputType="textPersonName"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+            </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/Divider5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp"></LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--Last Name Edit Text-->
+                <EditText
+                    android:id="@+id/txtMyAccountLastName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffff"
+                    android:ems="10"
+                    android:hint="Last Name"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <!--My Account Button-->
-        <Button
-            android:id="@+id/myacc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/my_button_bg2"
-            android:text="My ACCOUNT"
-            android:textColor="@android:color/background_light"
-            android:textStyle="bold" />
-        <!--Order History Button-->
-        <Button
-            android:id="@+id/orderhistory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/my_button_bg2"
-            android:text="ORDER HISTORY"
-            android:textColor="@android:color/background_light"
-            android:textStyle="bold" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Birthday"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ffc300"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+                <!--Month-->
+                <EditText
+                    android:id="@+id/txtMyAccountMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffff"
+                    android:ems="10"
+                    android:hint="Month"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
 
+                <LinearLayout
+                    android:id="@+id/Divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp"></LinearLayout>
+                <!--Day-->
+                <EditText
+                    android:id="@+id/txtMyAccountDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffff"
+                    android:ems="10"
+                    android:hint="Day"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+                <LinearLayout
+                    android:id="@+id/Divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp"></LinearLayout>
+                <!--Year-->
+                <EditText
+                    android:id="@+id/txtMyAccountYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffff"
+                    android:ems="10"
+                    android:hint="Year"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Full Name"
-            android:textAlignment="viewStart"
-            android:textColor="#ffc300"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Contact Number"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ffc300"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--Contact Number-->
+                <EditText
+                    android:id="@+id/txtMyAccountMobileNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffff"
+                    android:ems="10"
+                    android:hint=""
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <!--First Name Edit Text-->
-        <EditText
-            android:id="@+id/fisrtname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#ffff"
-            android:ems="10"
-            android:hint="First Name"
-            android:inputType="textPersonName"
-            android:textAlignment="viewStart"
-            android:textColor="@android:color/background_light"
-            android:textSize="24sp" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Address"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ffc300"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--Address-->
+                <EditText
+                    android:id="@+id/txtMyAccountAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffff"
+                    android:ems="10"
+                    android:hint=""
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+            </LinearLayout>
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <!--Last Name Edit Text-->
-        <EditText
-            android:id="@+id/lastname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#ffff"
-            android:ems="10"
-            android:hint="Last Name"
-            android:inputType="textPersonName"
-            android:textColor="@android:color/background_light"
-            android:textSize="24sp" />
-    </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/Divider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp"></LinearLayout>
+                <!--Save Changes Button-->
+                <Button
+                    android:id="@+id/svechanges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_button_bg2"
+                    android:text="SAVE CHANGES"
+                    android:textColor="@android:color/background_light"
+                    android:textStyle="bold" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Birthday"
-            android:textAlignment="viewStart"
-            android:textColor="#ffc300"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <!--Month-->
-        <EditText
-            android:id="@+id/month"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#ffff"
-            android:ems="10"
-            android:hint="Month"
-            android:inputType="textPersonName"
-            android:textColor="@android:color/background_light"
-            android:textSize="24sp" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <!--Day-->
-        <EditText
-            android:id="@+id/day"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#ffff"
-            android:ems="10"
-            android:hint="Day"
-            android:inputType="textPersonName"
-            android:textSize="24sp" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <!--Year-->
-        <EditText
-            android:id="@+id/year"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#ffff"
-            android:ems="10"
-            android:hint="Year"
-            android:inputType="textPersonName"
-            android:textColor="@android:color/background_light"
-            android:textSize="24sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Contact Number"
-            android:textAlignment="viewStart"
-            android:textColor="#ffc300"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <!--Contact Number-->
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#ffff"
-            android:ems="10"
-            android:hint=""
-            android:inputType="textPersonName"
-            android:textColor="@android:color/background_light"
-            android:textSize="24sp" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView33"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Address"
-            android:textAlignment="viewStart"
-            android:textColor="#ffc300"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <!--Address-->
-        <EditText
-            android:id="@+id/editText22"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#ffff"
-            android:ems="10"
-            android:hint=""
-            android:inputType="textPersonName"
-            android:textColor="@android:color/background_light"
-            android:textSize="24sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <!--Save Changes Button-->
-        <Button
-            android:id="@+id/svechanges"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/my_button_bg2"
-            android:text="SAVE CHANGES"
-            android:textColor="@android:color/background_light"
-            android:textStyle="bold" />
-    </LinearLayout>
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
