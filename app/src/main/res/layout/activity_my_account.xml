@@ -151,7 +151,6 @@
             android:ems="10"
             android:hint="Year"
             android:inputType="textPersonName"
-            android:textAllCaps="true"
             android:textColor="@android:color/background_light" />
     </LinearLayout>
 
