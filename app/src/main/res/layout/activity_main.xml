@@ -22,7 +22,8 @@
             android:textAlignment="center"
             android:textColor="@android:color/background_light"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,32 +43,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:background="#FFDF00 "
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/LblUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:fontFamily="sans-serif"
-            android:text="@string/user_name"
-            android:textAlignment="center"
-            android:textColor="@android:color/background_dark"
-            android:textSize="18sp" />
-
-
         <EditText
-            android:id="@+id/LogInUserName"
-            android:layout_width="0dp"
+            android:id="@+id/txtLogInEmailAddress"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:ems="10"
-            android:hint="@string/email_or_username"
-            android:inputType="textPersonName" />
-
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            tools:ignore="HardcodedText,TextFields"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="417dp" />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/Divider1"
         android:layout_width="match_parent"
@@ -75,32 +65,22 @@
         android:padding="3dp"
         android:orientation="horizontal">
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:background="#FFDF00 "
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/LblPassword"
-            android:layout_width="95dp"
-            android:layout_height="wrap_content"
-            android:text="@string/password"
-            android:textAlignment="center"
-            android:textColor="@android:color/background_dark"
-            android:textSize="18sp" />
-
         <EditText
-            android:id="@+id/LogInPassword"
-            android:layout_width="0dp"
+            android:id="@+id/txtLogInPassword"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:ems="10"
+            android:hint="Password"
             android:inputType="textPassword"
-            tools:ignore="LabelFor" />
+            tools:ignore="HardcodedText" />
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/Divider2"
@@ -124,8 +104,7 @@
             android:layout_weight="1"
             android:text="@string/log_in"
             android:background="@drawable/my_button_bg2"
-            android:textSize="18sp"
-            android:onClick="Login"/>
+            android:textSize="18sp"/>
 
     </LinearLayout>
     <LinearLayout
@@ -159,20 +138,5 @@
         android:padding="3dp"
         android:orientation="horizontal">
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnUserList"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/my_button_bg2"
-            android:text="@string/user_list"
-            android:textSize="18sp" />
-    </LinearLayout>
-
 
 </LinearLayout>
