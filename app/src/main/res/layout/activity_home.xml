@@ -29,6 +29,16 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <!--Login Button-->
+            <TextView
+                android:id="@+id/txtUser"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_weight="1"
+                android:background="@drawable/my_button_bg"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+
             <Button
                 android:id="@+id/button"
                 android:layout_width="match_parent"
@@ -101,5 +111,15 @@
 
 
 </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 
 </LinearLayout>

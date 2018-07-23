@@ -25,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
     DatabaseReference databaseUsernamesPasswords;
     ArrayList<String> User = new ArrayList<String>();
     ArrayList<String> Pass = new ArrayList<String>();
-
+    ArrayList<String> Fname = new ArrayList<String>();
+    ArrayList<String> Lname = new ArrayList<String>();
+    ArrayList<String> Mnumber = new ArrayList<String>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,15 +53,26 @@ public class MainActivity extends AppCompatActivity {
                 String email = LogInEmailAddress.getText().toString().trim();
                 String password = LogInPassword.getText().toString();
                 if(!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
+                    int y=0;
                     try{
                         for(int x=0;x<=User.size();x++){
                             if(email .equals(User.get(x)) && password .equals(Pass.get(x))) {
-                                Toast.makeText(MainActivity.this, "Successfully logged in", Toast.LENGTH_LONG).show();
-                                x=User.size();
+                                Intent intent = new Intent(MainActivity.this, home.class);
+                                Bundle b = new Bundle();
+                                b.putString("firstname", Fname.get(x));
+                                b.putString("lastname", Lname.get(x));
+                                b.putString("mobilenumber", Mnumber.get(x));
+                                b.putString("password", Pass.get(x));
+                                intent.putExtras(b);
+                                startActivity(intent);
+                                finish();
+                                y=1;
                             }
                         }
                     }catch(Exception e){
-                        Toast.makeText(MainActivity.this, "Wrong email or password", Toast.LENGTH_LONG).show();
+                        if(y==0) {
+                            Toast.makeText(MainActivity.this, "Wrong email or password", Toast.LENGTH_LONG).show();
+                        }
                     }
                 }
                 else if(TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
@@ -82,8 +95,14 @@ public class MainActivity extends AppCompatActivity {
 
                     String user = value.get("Email");
                     String pass = value.get("Password");
+                    String fname = value.get("First Name");
+                    String lname = value.get("Last Name");
+                    String mnumber = value.get("Mobile Number");
                     User.add(user);
                     Pass.add(pass);
+                    Fname.add(fname);
+                    Lname.add(lname);
+                    Mnumber.add(mnumber);
                 }
             }
 
