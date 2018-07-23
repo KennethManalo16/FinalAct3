@@ -12,7 +12,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="74dp"
+        android:layout_height="106dp"
         android:background="#C80D0D"
         android:orientation="horizontal">
 
@@ -23,21 +23,22 @@
             android:layout_height="match_parent"
             android:src="@drawable/mcdodelivery" />
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <!--Login Button-->
-            <TextView
-                android:id="@+id/txtUser"
+
+
+
+            <Button
+                android:id="@+id/button6"
                 android:layout_width="match_parent"
-                android:layout_height="53dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="PROFILE"
                 android:background="@drawable/my_button_bg"
-                android:textAlignment="center"
                 android:textColor="@android:color/background_light"
-                android:textSize="18sp" />
+                android:textSize="14sp"/>
 
             <Button
                 android:id="@+id/button"
@@ -45,17 +46,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/my_button_bg"
-                android:text="PROFILE"
+                android:text="ORDER SUMMARY"
                 android:textColor="@android:color/background_light"
                 android:textSize="14sp" />
-            <!--Register Button-->
+
             <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/my_button_bg"
-                android:text="ORDER HISTORY"
+                android:text="LOGOUT"
                 android:textColor="@android:color/background_light" />
         </LinearLayout>
 
@@ -65,16 +66,32 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#C80D0D"
+            android:text=" Hi Name, Welcome to Mcdonalds"
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
 
-        <ImageView
+        <Button
             android:id="@+id/btnBurgers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="Burgers"
-            app:srcCompat="@drawable/burger"/>
+
+            android:background="@drawable/burger" />
 
     </LinearLayout>
 
@@ -83,13 +100,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageView
+        <Button
             android:id="@+id/btnChicken"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="Chicken"
-            app:srcCompat="@drawable/chick"/>
+
+            android:background="@drawable/chick"/>
 
 
     </LinearLayout>
@@ -100,14 +117,13 @@
     android:layout_height="wrap_content">
 
 
-    <ImageView
+    <Button
         android:id="@+id/btnDesserts"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:onClick="Dessert"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/des" />
+        android:background="@drawable/des" />
 
 
 
