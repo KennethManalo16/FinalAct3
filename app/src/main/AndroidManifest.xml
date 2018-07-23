@@ -10,8 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,14 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home"></activity>
-        <activity android:name=".Register"></activity>
-        <activity android:name=".Chicken"></activity>
-        <activity android:name=".Burgers"></activity>
-        <activity android:name=".Dessert"></activity>
-        <activity android:name=".MyAccount"></activity>
-        <activity android:name=".OrderHistory"></activity>
-        <activity android:name=".ordersummary"></activity>
+        <activity android:name=".home" />
+        <activity android:name=".Register" />
+        <activity android:name=".Chicken" />
+        <activity android:name=".Burgers" />
+        <activity android:name=".Dessert" />
+        <activity android:name=".MyAccount" />
+        <activity android:name=".OrderHistory" />
+        <activity android:name=".ordersummary" />
+        <activity android:name=".OrderConfirmation"></activity>
     </application>
 
 </manifest>

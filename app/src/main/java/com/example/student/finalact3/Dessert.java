@@ -10,13 +10,14 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class Dessert extends AppCompatActivity {
-    Button mcdelivery;
+    Button mcdelivery,orderapplepie;
     TextView User;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dessert);
         mcdelivery = (Button) findViewById(R.id.mcdelivery);
+        orderapplepie = (Button) findViewById(R.id.orderapplepie);
         User = (TextView) findViewById(R.id.txtUser);
         final Bundle b = getIntent().getExtras();
         User.setText("Hi,  "+b.getString("firstname")+"!");
@@ -31,5 +32,19 @@ public class Dessert extends AppCompatActivity {
             }
 
         });
+
+        orderapplepie.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(Dessert.this,OrderConfirmation.class);
+                intent.putExtras(b);
+                startActivity(intent);
+                finish();
+            }
+
+        });
+
     }
+
+
 }
