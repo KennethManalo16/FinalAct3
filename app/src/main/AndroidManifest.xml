@@ -19,8 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home" />
+        <activity android:name=".home"></activity>
         <activity android:name=".Register"></activity>
+        <activity android:name=".Chicken"></activity>
+        <activity android:name=".Burgers"></activity>
+        <activity android:name=".Dessert"></activity>
+        <activity android:name=".MyAccount"></activity>
+        <activity android:name=".OrderHistory"></activity>
+        <activity android:name=".ordersummary"></activity>
     </application>
 
 </manifest>
