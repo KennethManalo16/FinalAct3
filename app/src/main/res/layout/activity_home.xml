@@ -68,13 +68,13 @@
         android:orientation="horizontal">
 
 
-        <ImageView
+        <Button
             android:id="@+id/btnBurgers"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="Burgers"
-            app:srcCompat="@drawable/burger"/>
+            android:background="@drawable/burger"/>
+
 
     </LinearLayout>
 
@@ -83,15 +83,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageView
+
+        <Button
             android:id="@+id/btnChicken"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="Chicken"
-            app:srcCompat="@drawable/chick"/>
-
-
+            android:background="@drawable/chick" />
     </LinearLayout>
 
 
@@ -100,17 +98,12 @@
     android:layout_height="wrap_content">
 
 
-    <ImageView
+    <Button
         android:id="@+id/btnDesserts"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:onClick="Dessert"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/des" />
-
-
-
+        android:background="@drawable/des" />
 </LinearLayout>
 
     <ScrollView
