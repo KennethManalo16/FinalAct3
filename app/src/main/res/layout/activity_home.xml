@@ -20,8 +20,8 @@
         <ImageView
             android:id="@+id/mcdelivery"
             android:layout_width="203dp"
-            android:layout_height="match_parent"/>
-            <!--android:src="@drawable/mcdodelivery" -->
+            android:layout_height="match_parent"
+            android:src="@drawable/mcdodelivery" />
 
 
         <LinearLayout
@@ -63,8 +63,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="Burgers"/>
-            <!--app:srcCompat="@drawable/burger"-->
+            android:onClick="Burgers"
+            app:srcCompat="@drawable/burger"/>
 
     </LinearLayout>
 
@@ -78,8 +78,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="Chicken"/>
-            <!--app:srcCompat="@drawable/chick"-->
+            android:onClick="Chicken"
+            app:srcCompat="@drawable/chick"/>
 
 
     </LinearLayout>
@@ -92,11 +92,12 @@
 
     <ImageView
         android:id="@+id/btnDesserts"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:onClick="Dessert"/>
-        <!--app:srcCompat="@drawable/des"-->
+        android:onClick="Dessert"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/des" />
 
 
 
