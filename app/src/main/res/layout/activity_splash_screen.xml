@@ -2,14 +2,16 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
 android:id="@+id/TableLayout1"
 android:layout_width="fill_parent"
-android:layout_height="fill_parent" >
+android:layout_height="fill_parent"
+    android:background="@drawable/sbg">
 
-<ImageView
-    android:id="@+id/splashscreen"
-    android:layout_width="wrap_content"
-    android:layout_height="fill_parent"
-    android:layout_gravity="center"
-    android:src="@drawable/unnamed" />
+    <ImageView
+        android:id="@+id/splashscreen"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:scaleType="fitEnd"
+        android:src="@drawable/mcdo" />
 
 <TextView
     android:layout_width="wrap_content"
