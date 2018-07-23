@@ -111,7 +111,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
+        <!--proceed to checkout-->
         <Button
             android:id="@+id/button7"
             android:layout_width="match_parent"
@@ -120,9 +120,9 @@
             android:background="#FDAB05"
             android:textSize="24sp"
             android:textStyle="bold"/>
-
+        <!--Close bag-->
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/button69"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="CLOSE BAG"
