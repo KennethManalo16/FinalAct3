@@ -14,7 +14,7 @@
         >
 
         <TextView
-            android:id="@+id/LblOrderingSystem"
+            android:id="@+id/LblOrderingSystems"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="serif"
