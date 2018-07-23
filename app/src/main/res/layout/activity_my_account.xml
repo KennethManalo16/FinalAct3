@@ -7,34 +7,85 @@
     android:orientation="vertical"
     android:background="#dd1021"
     tools:context=".MyAccount">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="#C80D0D"
+        android:orientation="horizontal">
+
+        <!--McDelivery Image-->
+        <ImageView
+            android:id="@+id/mcdelivery"
+            android:layout_width="203dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/mcdodelivery" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--Profile Button-->
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PROFILE"
+                android:background="@drawable/my_button_bg"
+                android:textColor="@android:color/background_light"
+                android:textSize="14sp"/>
+            <!--Order History-->
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/my_button_bg"
+                android:text="ORDER SUMMARY"
+                android:textColor="@android:color/background_light"
+                android:textSize="14sp" />
+            <!--Logout Button-->
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/my_button_bg"
+                android:text="LOGOUT"
+                android:textColor="@android:color/background_light" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
+        <!--My Account Button-->
         <Button
             android:id="@+id/myacc"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="#ffc300"
-
-
+            android:background="@drawable/my_button_bg2"
             android:text="My ACCOUNT"
             android:textColor="@android:color/background_light"
             android:textStyle="bold" />
-
+        <!--Order History Button-->
         <Button
             android:id="@+id/orderhistory"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="#ffc300"
+            android:background="@drawable/my_button_bg2"
             android:text="ORDER HISTORY"
             android:textColor="@android:color/background_light"
             android:textStyle="bold" />
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,8 +99,8 @@
             android:layout_weight="1"
             android:text="Full Name"
             android:textAlignment="viewStart"
-            android:textColor="@android:color/background_light"
-            android:textSize="18sp"
+            android:textColor="#ffc300"
+            android:textSize="24sp"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -57,17 +108,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
+        <!--First Name Edit Text-->
         <EditText
             android:id="@+id/fisrtname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#ffff"
             android:ems="10"
             android:hint="First Name"
             android:inputType="textPersonName"
             android:textAlignment="viewStart"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -79,17 +132,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-
+        <!--Last Name Edit Text-->
         <EditText
             android:id="@+id/lastname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#ffff"
             android:ems="10"
             android:hint="Last Name"
             android:inputType="textPersonName"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -104,54 +158,59 @@
             android:layout_weight="1"
             android:text="Birthday"
             android:textAlignment="viewStart"
-            android:textColor="@android:color/background_light"
-            android:textSize="18sp"
+            android:textColor="#ffc300"
+            android:textSize="24sp"
             android:textStyle="bold" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-         <EditText
+        <!--Month-->
+        <EditText
             android:id="@+id/month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#ffff"
             android:ems="10"
             android:hint="Month"
             android:inputType="textPersonName"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
+        <!--Day-->
         <EditText
             android:id="@+id/day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#ffff"
             android:ems="10"
             android:hint="Day"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textSize="24sp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-
+        <!--Year-->
         <EditText
             android:id="@+id/year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#ffff"
             android:ems="10"
             android:hint="Year"
             android:inputType="textPersonName"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -166,39 +225,72 @@
             android:layout_weight="1"
             android:text="Contact Number"
             android:textAlignment="viewStart"
-            android:textColor="@android:color/background_light"
-            android:textSize="18sp"
+            android:textColor="#ffc300"
+            android:textSize="24sp"
             android:textStyle="bold" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-
+        <!--Contact Number-->
         <EditText
             android:id="@+id/editText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#ffff"
             android:ems="10"
             android:hint=""
             android:inputType="textPersonName"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Address"
+            android:textAlignment="viewStart"
+            android:textColor="#ffc300"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--Address-->
+        <EditText
+            android:id="@+id/editText22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffff"
+            android:ems="10"
+            android:hint=""
+            android:inputType="textPersonName"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-
+        <!--Save Changes Button-->
         <Button
             android:id="@+id/svechanges"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="#ffc300"
+            android:background="@drawable/my_button_bg2"
             android:text="SAVE CHANGES"
             android:textColor="@android:color/background_light"
             android:textStyle="bold" />
