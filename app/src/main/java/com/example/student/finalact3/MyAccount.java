@@ -6,14 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 public class MyAccount extends AppCompatActivity {
+    ImageView mcdelivery;
     EditText fname,lname,bdaymonth,bdayday,bdayyear,mobilenumber,address;
     Button myaccount,ordersummary,logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_account);
+        mcdelivery = (ImageView) findViewById(R.id.mcdelivery);
         fname = (EditText) findViewById(R.id.txtMyAccountFirstName);
         lname = (EditText) findViewById(R.id.txtMyAccountLastName);
         bdaymonth = (EditText) findViewById(R.id.txtMyAccountMonth);
@@ -29,6 +32,16 @@ public class MyAccount extends AppCompatActivity {
         lname.setText(b.getString("lastname"));
         mobilenumber.setText(b.getString("mobilenumber"));
         address.setText(b.getString("address"));
+        mcdelivery.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(MyAccount.this,home.class);
+                intent.putExtras(b);
+                startActivity(intent);
+                finish();
+            }
+
+        });
         myaccount.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -43,6 +56,8 @@ public class MyAccount extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(MyAccount.this,ordersummary.class);
+                String osbe = "myaccount";
+                b.putString("ordersummaryback", osbe);
                 intent.putExtras(b);
                 startActivity(intent);
                 finish();

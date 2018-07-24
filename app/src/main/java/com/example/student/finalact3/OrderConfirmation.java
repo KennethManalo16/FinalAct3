@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 public class OrderConfirmation extends AppCompatActivity {
     int quantity=1;
+    Double price=0.00;
     Button numdecrement,numincrement,cancel;
     TextView displayquantityy,productname,productprice;
     @Override
@@ -24,9 +25,9 @@ public class OrderConfirmation extends AppCompatActivity {
         final Bundle b = getIntent().getExtras();
         productname = (TextView) findViewById(R.id.txtProductName);
         productprice = (TextView) findViewById(R.id.txtPrice);
-        productname.setText(b.getString("name"));
-        productprice.setText(b.getString("price"));
-
+        productname.setText(b.getString("prodname"));
+        productprice.setText("PHP:"+b.getString("prodprice"));
+        price = Double.parseDouble(String.valueOf(b.getString("prodprice")));
         numdecrement.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -37,6 +38,8 @@ public class OrderConfirmation extends AppCompatActivity {
                else {
                    quantity = quantity - 1;
                    displayquantityy.setText(""+quantity);
+                   Double priceequivalent = price * quantity;
+                   productprice.setText("PHP:"+priceequivalent);
                }
             }
 
@@ -44,8 +47,11 @@ public class OrderConfirmation extends AppCompatActivity {
         numincrement.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
+
                 quantity = quantity + 1;
                 displayquantityy.setText(""+quantity);
+                Double priceequivalent = price * quantity;
+                productprice.setText("PHP:"+priceequivalent);
             }
 
         });

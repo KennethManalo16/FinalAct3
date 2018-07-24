@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "854141516136",
+    "firebase_url": "https://finalact3-c4831.firebaseio.com",
+    "project_id": "finalact3-c4831",
+    "storage_bucket": "finalact3-c4831.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854141516136:android:0933481d961e033b",
+        "android_client_info": {
+          "package_name": "com.example.student.finalact3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "854141516136-l85gs59lotiga1r9hiqsn117e82alcsf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.student.finalact3",
+            "certificate_hash": "235f2789b2fb3c0cf7065836b9af773511e8a528"
+          }
+        },
+        {
+          "client_id": "854141516136-nq931v0ea24csjje8aid9nm6rce9achj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJC1vJzD5hjyTpLI4wgpO2yUAPhV8TQb4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "854141516136-nq931v0ea24csjje8aid9nm6rce9achj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

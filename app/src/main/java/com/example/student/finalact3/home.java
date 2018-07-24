@@ -26,7 +26,7 @@ public class home extends AppCompatActivity {
 
         User = (TextView) findViewById(R.id.txtUser);
 
-        User.setText("Hi,  "+b.getString("firstname")+"!");
+        User.setText("Hi,  "+b.getString("firstname")+" Welcome to Mcdonalds!");
 
       burgers.setOnClickListener(new View.OnClickListener(){
         @Override
@@ -74,6 +74,8 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(home.this,ordersummary.class);
+                String osbe = "home";
+                b.putString("ordersummaryback", osbe);
                 intent.putExtras(b);
                 startActivity(intent);
                 finish();

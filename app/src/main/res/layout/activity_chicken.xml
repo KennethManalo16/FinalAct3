@@ -104,7 +104,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/Chickenorder1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -151,7 +151,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/order2"
+                android:id="@+id/Chickenorder2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -198,7 +198,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/order3"
+                android:id="@+id/Chickenorder3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -246,7 +246,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/order4"
+                android:id="@+id/Chickenorder4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -293,7 +293,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/order5"
+                android:id="@+id/Chickenorder5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
