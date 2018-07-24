@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,8 +21,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Dessert extends AppCompatActivity {
-    Button mcdelivery,order1,order2,order3,order4,order5;
-
+    Button order1,order2,order3,order4,order5,myaccount,ordersummary,logout;
+    ImageView mcdelivery;
     DatabaseReference databaseProductsDesserts;
     ArrayList<String> DessertName = new ArrayList<String>();
     ArrayList<String> DessertPrice = new ArrayList<String>();
@@ -32,13 +33,16 @@ public class Dessert extends AppCompatActivity {
         setContentView(R.layout.activity_dessert);
         databaseProductsDesserts = FirebaseDatabase.getInstance().getReference("Desserts");
 
-        mcdelivery = (Button) findViewById(R.id.mcdelivery);
+        mcdelivery = (ImageView) findViewById(R.id.mcdelivery);
         order1 = (Button) findViewById(R.id.Dessertorder1);
         order2 = (Button) findViewById(R.id.Dessertorder2);
         order3 = (Button) findViewById(R.id.Dessertorder3);
         order4 = (Button) findViewById(R.id.Dessertorder4);
         order5 = (Button) findViewById(R.id.Dessertorder5);
         final Bundle b = getIntent().getExtras();
+        myaccount = (Button) findViewById(R.id.btnMyAccount);
+        ordersummary = (Button) findViewById(R.id.btnOrderSummary);
+        logout = (Button) findViewById(R.id.btnLogOut);
 
         mcdelivery.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -112,7 +116,39 @@ public class Dessert extends AppCompatActivity {
             }
 
         });
+        myaccount.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(Dessert.this,MyAccount.class);
+                intent.putExtras(b);
+                startActivity(intent);
+                finish();
+            }
 
+        });
+        ordersummary.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(Dessert.this,ordersummary.class);
+                String osbe = "dessert";
+                b.putString("ordersummaryback", osbe);
+                intent.putExtras(b);
+                startActivity(intent);
+                finish();
+            }
+
+        });
+
+        logout.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(Dessert.this, MainActivity.class);
+                intent.putExtras(b);
+                startActivity(intent);
+                finish();
+            }
+
+        });
         databaseProductsDesserts.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {

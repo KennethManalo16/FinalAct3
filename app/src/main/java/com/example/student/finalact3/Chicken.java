@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -17,7 +18,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Chicken extends AppCompatActivity {
-    Button mcdelivery,order1,order2,order3,order4,order5;
+    Button order1,order2,order3,order4,order5,myaccount,ordersummary,logout;
+    ImageView  mcdelivery;
     DatabaseReference databaseProductsChickens;
     ArrayList<String> ChickenName = new ArrayList<String>();
     ArrayList<String> ChickenPrice = new ArrayList<String>();
@@ -26,14 +28,16 @@ public class Chicken extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chicken);
         databaseProductsChickens = FirebaseDatabase.getInstance().getReference("Chickens");
-        mcdelivery = (Button) findViewById(R.id.mcdelivery);
+        mcdelivery = (ImageView) findViewById(R.id.mcdelivery);
         order1 = (Button) findViewById(R.id.Chickenorder1);
         order2 = (Button) findViewById(R.id.Chickenorder2);
         order3 = (Button) findViewById(R.id.Chickenorder3);
         order4 = (Button) findViewById(R.id.Chickenorder4);
         order5 = (Button) findViewById(R.id.Chickenorder5);
         final Bundle b = getIntent().getExtras();
-
+        myaccount = (Button) findViewById(R.id.btnMyAccount);
+        ordersummary = (Button) findViewById(R.id.btnOrderSummary);
+        logout = (Button) findViewById(R.id.btnLogOut);
 
         mcdelivery.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -101,6 +105,39 @@ public class Chicken extends AppCompatActivity {
                 Intent intent = new Intent(Chicken.this, OrderConfirmation.class);
                 b.putString("prodname",  ChickenName.get(4));
                 b.putString("prodprice", ChickenPrice.get(4));
+                intent.putExtras(b);
+                startActivity(intent);
+                finish();
+            }
+
+        });
+        myaccount.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(Chicken.this,MyAccount.class);
+                intent.putExtras(b);
+                startActivity(intent);
+                finish();
+            }
+
+        });
+        ordersummary.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(Chicken.this,ordersummary.class);
+                String osbe = "chicken";
+                b.putString("ordersummaryback", osbe);
+                intent.putExtras(b);
+                startActivity(intent);
+                finish();
+            }
+
+        });
+
+        logout.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(Chicken.this, MainActivity.class);
                 intent.putExtras(b);
                 startActivity(intent);
                 finish();

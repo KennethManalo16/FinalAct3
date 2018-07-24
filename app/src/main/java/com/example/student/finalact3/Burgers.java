@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -17,7 +18,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Burgers extends AppCompatActivity {
-    Button mcdelivery,order1,order2,order3,order4,order5;
+    Button order1,order2,order3,order4,order5,myaccount,ordersummary,logout;
+    ImageView mcdelivery;
     DatabaseReference databaseProductsBurgers;
     ArrayList<String> BurgerName = new ArrayList<String>();
     ArrayList<String> BurgerPrice = new ArrayList<String>();
@@ -26,14 +28,16 @@ public class Burgers extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_burgers);
         databaseProductsBurgers = FirebaseDatabase.getInstance().getReference("Burgers");
-        mcdelivery = (Button) findViewById(R.id.mcdelivery);
+        mcdelivery = (ImageView) findViewById(R.id.mcdelivery);
         order1 = (Button) findViewById(R.id.Burgerorder1);
         order2 = (Button) findViewById(R.id.Burgerorder2);
         order3 = (Button) findViewById(R.id.Burgerorder3);
         order4 = (Button) findViewById(R.id.Burgerorder4);
         order5 = (Button) findViewById(R.id.Burgerorder5);
         final Bundle b = getIntent().getExtras();
-        ;
+        myaccount = (Button) findViewById(R.id.btnMyAccount);
+        ordersummary = (Button) findViewById(R.id.btnOrderSummary);
+        logout = (Button) findViewById(R.id.btnLogOut);
 
         mcdelivery.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -107,7 +111,39 @@ public class Burgers extends AppCompatActivity {
             }
 
         });
+        myaccount.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(Burgers.this,MyAccount.class);
+                intent.putExtras(b);
+                startActivity(intent);
+                finish();
+            }
 
+        });
+        ordersummary.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(Burgers.this,ordersummary.class);
+                String osbe = "burger";
+                b.putString("ordersummaryback", osbe);
+                intent.putExtras(b);
+                startActivity(intent);
+                finish();
+            }
+
+        });
+
+        logout.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(Burgers.this, MainActivity.class);
+                intent.putExtras(b);
+                startActivity(intent);
+                finish();
+            }
+
+        });
         databaseProductsBurgers.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {

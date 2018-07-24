@@ -30,6 +30,24 @@ public class ordersummary extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }
+                else if (b.get("ordersummaryback").equals("chicken")){
+                    Intent intent = new Intent(ordersummary.this, Chicken.class);
+                    intent.putExtras(b);
+                    startActivity(intent);
+                    finish();
+                }
+                else if (b.get("ordersummaryback").equals("burger")){
+                    Intent intent = new Intent(ordersummary.this, Chicken.class);
+                    intent.putExtras(b);
+                    startActivity(intent);
+                    finish();
+                }
+                else if (b.get("ordersummaryback").equals("dessert")){
+                    Intent intent = new Intent(ordersummary.this, Chicken.class);
+                    intent.putExtras(b);
+                    startActivity(intent);
+                    finish();
+                }
                 else{
                     Toast.makeText(ordersummary.this, "Fail equivalent", Toast.LENGTH_LONG).show();
                 }

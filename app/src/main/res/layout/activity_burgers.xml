@@ -10,50 +10,51 @@
     tools:context=".Dessert">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="74dp"
+        android:layout_height="106dp"
         android:background="#C80D0D"
         android:orientation="horizontal">
 
         <!--McDelivery Image-->
-        <Button
+        <ImageView
             android:id="@+id/mcdelivery"
             android:layout_width="203dp"
             android:layout_height="match_parent"
-            android:background="@drawable/mcdodelivery" />
-
+            android:src="@drawable/mcdodelivery" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <!--Login Button-->
-            <TextView
-                android:id="@+id/txtUser"
-                android:layout_width="match_parent"
-                android:layout_height="53dp"
-                android:layout_weight="1"
-                android:background="@drawable/my_button_bg"
-                android:textAlignment="center"
-                android:textColor="@android:color/background_light"
-                android:textSize="18sp" />
+
+
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnMyAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="MY ACCOUNT"
+                android:background="@drawable/my_button_bg"
+                android:textColor="@android:color/background_light"
+                android:textSize="14sp"/>
+
+            <Button
+                android:id="@+id/btnOrderSummary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/my_button_bg"
-                android:text="PROFILE"
+                android:text="ORDER SUMMARY"
                 android:textColor="@android:color/background_light"
                 android:textSize="14sp" />
-            <!--Register Button-->
+
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btnLogOut"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/my_button_bg"
-                android:text="ORDER HISTORY"
+                android:text="LOGOUT"
                 android:textColor="@android:color/background_light" />
         </LinearLayout>
 
