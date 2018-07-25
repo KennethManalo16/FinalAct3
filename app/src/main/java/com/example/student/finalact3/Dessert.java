@@ -1,6 +1,7 @@
 package com.example.student.finalact3;
 
 import android.content.Intent;
+import android.graphics.Picture;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,6 +28,7 @@ public class Dessert extends AppCompatActivity {
     ArrayList<String> DessertName = new ArrayList<String>();
     ArrayList<String> DessertPrice = new ArrayList<String>();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +46,7 @@ public class Dessert extends AppCompatActivity {
         ordersummary = (Button) findViewById(R.id.btnOrderSummary);
         logout = (Button) findViewById(R.id.btnLogOut);
 
+
         mcdelivery.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -51,6 +54,7 @@ public class Dessert extends AppCompatActivity {
                 intent.putExtras(b);
                 startActivity(intent);
                 finish();
+
             }
 
         });
@@ -61,10 +65,10 @@ public class Dessert extends AppCompatActivity {
                 Intent intent = new Intent(Dessert.this, OrderConfirmation.class);
                 b.putString("prodname",  DessertName.get(0));
                 b.putString("prodprice", DessertPrice.get(0));
+                b.putString("imagename", "applepie");
                 intent.putExtras(b);
                 startActivity(intent);
                 finish();
-
             }
 
         });

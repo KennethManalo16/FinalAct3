@@ -8,11 +8,13 @@
     android:orientation="vertical"
     tools:context=".OrderConfirmation">
 
-    <TextView
-        android:id="@+id/picture"
+    <ImageView
+        android:id="@+id/Picture"
         android:layout_width="match_parent"
-        android:layout_height="219dp"
-        android:text="TextView" />
+        android:layout_height="85dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_orange_dark"
+         />
 
     <TextView
         android:id="@+id/txtProductName"

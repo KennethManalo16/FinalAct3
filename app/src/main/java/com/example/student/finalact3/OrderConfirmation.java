@@ -1,10 +1,12 @@
 package com.example.student.finalact3;
 
 import android.content.Intent;
+import android.graphics.Picture;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,11 +15,15 @@ public class OrderConfirmation extends AppCompatActivity {
     Double price=0.00;
     Button numdecrement,numincrement,cancel;
     TextView displayquantityy,productname,productprice;
+    ImageView Picture;
+    String imagename,select;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_confirmation);
-
+        Picture = (ImageView) findViewById(R.id.Picture);
         numdecrement = (Button) findViewById(R.id.minus);
         numincrement = (Button) findViewById(R.id.plus);
         cancel = (Button) findViewById(R.id.cancel);
@@ -28,6 +34,11 @@ public class OrderConfirmation extends AppCompatActivity {
         productname.setText(b.getString("prodname"));
         productprice.setText("PHP:"+b.getString("prodprice"));
         price = Double.parseDouble(String.valueOf(b.getString("prodprice")));
+        select = b.getString("imagename");
+        imagename = "Picture";
+        int resID = getResources().getIdentifier(imagename,"id","package.name");
+        Picture.setImageResource(resID);
+
         numdecrement.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
