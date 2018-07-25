@@ -63,6 +63,7 @@ public class Dessert extends AppCompatActivity {
             @Override
             public void onClick(View view){ ;
                 Intent intent = new Intent(Dessert.this, OrderConfirmation.class);
+
                 b.putString("prodname",  DessertName.get(0));
                 b.putString("prodprice", DessertPrice.get(0));
                 b.putString("imagename", "applepie");

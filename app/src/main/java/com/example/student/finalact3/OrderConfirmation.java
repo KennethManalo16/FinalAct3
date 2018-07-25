@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
+
 public class OrderConfirmation extends AppCompatActivity {
     int quantity=1;
     Double price=0.00;
@@ -24,6 +26,7 @@ public class OrderConfirmation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_confirmation);
         Picture = (ImageView) findViewById(R.id.Picture);
+
         numdecrement = (Button) findViewById(R.id.minus);
         numincrement = (Button) findViewById(R.id.plus);
         cancel = (Button) findViewById(R.id.cancel);
@@ -34,10 +37,53 @@ public class OrderConfirmation extends AppCompatActivity {
         productname.setText(b.getString("prodname"));
         productprice.setText("PHP:"+b.getString("prodprice"));
         price = Double.parseDouble(String.valueOf(b.getString("prodprice")));
-        select = b.getString("imagename");
-        imagename = "Picture";
-        int resID = getResources().getIdentifier(imagename,"id","package.name");
-        Picture.setImageResource(resID);
+        select = b.getString("prodname");
+
+        if(select.equals("Apple Pie")){
+            Picture.setImageResource(R.drawable.applepie);
+        }
+        else if(select.equals("Caramel Sundae")){
+            Picture.setImageResource(R.drawable.caramel);
+        }
+        else if(select.equals("McFloat")){
+            Picture.setImageResource(R.drawable.floats);
+        }
+        else if(select.equals("Sundae")){
+            Picture.setImageResource(R.drawable.hotfudge);
+        }
+        else if(select.equals("McFlurry")){
+            Picture.setImageResource(R.drawable.flurry);
+        }
+        else if(select.equals("Big Mac")){
+            Picture.setImageResource(R.drawable.bigmac);
+        }
+        else if(select.equals("Cheeseburger")){
+            Picture.setImageResource(R.drawable.cheese);
+        }
+        else if(select.equals("Crispy Chicken Sandwich")){
+            Picture.setImageResource(R.drawable.crispy);
+        }
+        else if(select.equals("Fillet O-Fish")){
+            Picture.setImageResource(R.drawable.fish);
+        }
+        else if(select.equals("McChicken")){
+            Picture.setImageResource(R.drawable.mcchicken);
+        }
+        else if(select.equals("Chicken w/ Fries")){
+            Picture.setImageResource(R.drawable.chickenfries);
+        }
+        else if(select.equals("Chicken w/ Soup")){
+            Picture.setImageResource(R.drawable.chickensoup);
+        }
+        else if(select.equals("Chicken w/ Spaghetti")){
+            Picture.setImageResource(R.drawable.chickenspag);
+        }
+        else if(select.equals("Chicken w/ Sundae")){
+            Picture.setImageResource(R.drawable.chickensundae);
+        }
+        else if(select.equals("Spicy Chicken")){
+            Picture.setImageResource(R.drawable.spicychicken);
+        }
 
         numdecrement.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -77,7 +123,12 @@ public class OrderConfirmation extends AppCompatActivity {
             }
 
         });
+
+
+
     }
+
+
 
 
 }
